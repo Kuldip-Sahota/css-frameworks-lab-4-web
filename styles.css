@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-color: #333;
+    --header-font-size: 2.5rem;
+    --subheader-font-size: 1.5rem;
+    --body-font-size: 1rem;
+    --footer-bg-color: #2c3e50;
+    --footer-text-color: #ecf0f1;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 100px; 
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: var(--font-color);
+    font-size: var(--body-font-size);
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: white; 
+    padding: 20px 0; 
+    text-align: center;
+    font-size: var(--header-font-size);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 100%; 
+    height: auto; 
+}
+
+
+header h1 {
+    display: block; 
+    color: rgb(194, 245, 241); 
+    z-index: 1001; 
+}
+
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 10px;
+    text-align: center;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.intro {
+    background-color: #f78585;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: var(--subheader-font-size);
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    margin: 20px 0;
+}
+
+.flex-item {
+    background-color: var(--secondary-color);
+    color: rgb(247, 245, 245);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    border-radius: 8px;
+}
+
+.flex-item h3 {
+    margin-bottom: 10px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    margin: 20px 0;
+}
+
+.grid-item {
+    background-color: #e0c10f;
+    color: rgb(177, 40, 40);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+.relative-container {
+    position: relative;
+    background-color: #a9afb1;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+}
